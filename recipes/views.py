@@ -7,6 +7,19 @@ from .serializers.common import *
 # Create your views here.
 class ListView(APIView):
     def get(self, request):
-        recipes = Recipe.objects.all()
+        recipes = Recipe.objects.all()  #get all the recipes
         serializer = RecipeSerializer(recipes, many=True)
-        return Response(serializer.data)
+        return Response(serializer.data) #send JSON to the user
+
+class CreateView(APIView):
+    def post(self, request):
+        return Response('hello world')
+
+class DetailView(APIView): 
+    def get(self, _request, pk):
+        recipe = Recipe.objects.get(pk=pk) #get receipe by id
+        serializer = DetailedRecipeSerializer(recipe)
+
+        return Response(serializer.data) #send JSON to the user
+
+
