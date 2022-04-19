@@ -24,5 +24,4 @@ class IngredientSerializer(serializers.ModelSerializer):
 
 class DetailedRecipeSerializer(RecipeSerializer):
         ingredients = IngredientSerializer(many=True)
-
-
+        # quantity = RecipeIngredientsSerializer(many=True)
