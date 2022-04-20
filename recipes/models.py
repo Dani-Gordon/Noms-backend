@@ -12,18 +12,18 @@ class Recipe(models.Model):
     description = models.TextField(max_length=200, null=True)
     prep = models.IntegerField(null=True)
     total = models.IntegerField(null=True)
-    ingredients = models.ManyToManyField(Ingredient, through='RecipeIngredients')
+    ingredients = models.ManyToManyField(Ingredient, through='RecipeIngredient')
     directions = models.TextField(max_length=1000, null=True)
 
     def __str__(self):
         return self.name 
 
-class RecipeIngredients(models.Model):
-    recipetitle = models.ForeignKey(Recipe, on_delete=models.CASCADE, null=True)
+class RecipeIngredient(models.Model):
+    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, null=True)
     ingredient = models.ForeignKey(Ingredient, on_delete=models.CASCADE, null=True)
     quantity = models.IntegerField(null=True)
 
     def __str__(self):
-        return f'{self.recipetitle.name} {self.ingredient.name} {self.quantity}'
+        return f'{self.recipe.name} {self.ingredient.name} {self.quantity}'
 
 
