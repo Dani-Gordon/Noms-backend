@@ -1,34 +1,34 @@
 [
   {
-    "model": "recipe.ingredient",
+    "model": "recipes.ingredient",
     "pk": 1,
     "fields": {
       "name": "ground beef"
     }
   },
   {
-    "model": "recipe.ingredient",
+    "model": "recipes.ingredient",
     "pk": 2,
     "fields": {
       "name": "parmesan cheese"
     }
   },
   {
-    "model": "recipe.ingredient",
+    "model": "recipes.ingredient",
     "pk": 3,
     "fields": {
       "name": "tomato sauce"
     }
   },
   {
-    "model": "recipe.ingredient",
+    "model": "recipes.ingredient",
     "pk": 4,
     "fields": {
       "name": "pasta"
     }
   },
   {
-    "model": "recipe.ingredient",
+    "model": "recipes.ingredient",
     "pk": 5,
     "fields": {
       "name": "salt"
@@ -42,28 +42,28 @@
     }
   },
   {
-    "model": "recipe.ingredient",
+    "model": "recipes.ingredient",
     "pk": 7,
     "fields": {
       "name": "olive oil"
     }
   },
   {
-    "model": "recipe.ingredient",
+    "model": "recipes.ingredient",
     "pk": 8,
     "fields": {
       "name": "parmesan cheese"
     }
   },
   {
-    "model": "recipe.ingredient",
+    "model": "recipes.ingredient",
     "pk": 9,
     "fields": {
       "name": "pasta"
     }
   },
   {
-    "model": "recipe.recipe",
+    "model": "recipes.recipe",
     "pk": 1,
     "fields": {
       "name": "Beefaroni",
@@ -74,7 +74,7 @@
     }
   },
   {
-    "model": "recipe.recipeingredient",
+    "model": "recipes.recipeingredient",
     "pk": 1,
     "fields": {
       "recipetitle": 1,
@@ -83,7 +83,7 @@
     }
   },
   {
-    "model": "recipe.recipeingredient",
+    "model": "recipes.recipeingredient",
     "pk": 2,
     "fields": {
       "recipetitle": 1,
@@ -92,7 +92,7 @@
     }
   },
   {
-    "model": "recipe.recipeingredient",
+    "model": "recipes.recipeingredient",
     "pk": 3,
     "fields": {
       "recipetitle": 1,
