@@ -28,4 +28,4 @@ class UserSerializer(serializers.ModelSerializer): #validates incoming user from
 
     class Meta:
         model = User
-        fields = ('username', 'email', 'password', 'password_confirmation',)#would not tuypcially want to display the password in serializer format
+        fields = ('id','username', 'email', 'password', 'password_confirmation',)#would not tuypcially want to display the password in serializer format
