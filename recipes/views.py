@@ -3,6 +3,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import *
 from .serializers.common import *
+from jwt_auth.serializers import UserSerializer
 
 # Create your views here.
 class ListView(APIView):
@@ -26,4 +27,10 @@ class DetailView(APIView):
 
         return Response(serializer.data) #send JSON to the user
 
+class AllUsersView(APIView):
 
+    # permission_classes = [IsAuthenticated,]
+
+    def get(self, request): 
+        serializer = UserSerializer(request.user)
+        return Response(serializer.data)

@@ -3,6 +3,7 @@ from django.contrib.auth import get_user_model
 import django.contrib.auth.password_validation as validations
 from django.contrib.auth.hashers import make_password
 from django.core.exceptions import ValidationError
+from recipes.serializers.common import DetailedRecipeSerializer
 User = get_user_model()#shortcut - whatever the current usermodel is, use that
 
 class UserSerializer(serializers.ModelSerializer): #validates incoming user from request and puts them in the database
@@ -28,4 +29,7 @@ class UserSerializer(serializers.ModelSerializer): #validates incoming user from
 
     class Meta:
         model = User
-        fields = ('id','username', 'email', 'password', 'password_confirmation',)#would not tuypcially want to display the password in serializer format
+        fields = ('id','username', 'email', 'password', 'password_confirmation', 'favorites',)#would not tuypcially want to display the password in serializer format
+
+class PopulatedUserSerializer(UserSerializer):
+    favorites = DetailedRecipeSerializer(many=True)

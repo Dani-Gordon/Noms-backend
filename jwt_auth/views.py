@@ -1,4 +1,5 @@
 from datetime import datetime, timedelta
+from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.exceptions import PermissionDenied
@@ -8,6 +9,7 @@ from django.conf import settings
 
 import jwt
 from .serializers import UserSerializer
+from jwt_auth.serializers import PopulatedUserSerializer
 User = get_user_model()
 
 class RegisterView(APIView):
@@ -61,3 +63,27 @@ class CredentialsView(APIView):
         serializer = UserSerializer(request.user)
         return Response(serializer.data)
 
+class CurrentUserView(APIView):
+    permission_classes = [IsAuthenticated,]
+
+    def get(self, request): 
+        serializer = UserSerializer(request.user)
+        return Response(serializer.data)
+
+class ProfileView(APIView):
+
+    permission_classes = (IsAuthenticated, )
+
+    def get(self, request, pk):
+        user = User.objects.get(id=pk)
+        if user != request.user:
+            raise PermissionDenied()
+        serialized_user = PopulatedUserSerializer(user)
+        return Response(serialized_user.data, status=status.HTTP_200_OK)
+
+
+class ProfileListView(APIView):
+    def get(self, request):
+        users = User.objects.all()
+        serialized_users = PopulatedUserSerializer(users, many=True)
+        return Response(serialized_users.data, status=status.HTTP_200_OK)
