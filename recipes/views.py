@@ -1,6 +1,7 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework.permissions import IsAuthenticated
 from .models import *
 from .serializers.common import *
 from jwt_auth.serializers import UserSerializer
@@ -27,10 +28,14 @@ class DetailView(APIView):
 
         return Response(serializer.data) #send JSON to the user
 
-class AllUsersView(APIView):
 
-    # permission_classes = [IsAuthenticated,]
+class LikeView(APIView):
 
-    def get(self, request): 
-        serializer = UserSerializer(request.user)
-        return Response(serializer.data)
+    permission_classes = (IsAuthenticated, )
+
+    def post(self, request, pk):
+
+        request.user.favorites.add(pk)
+        request.user.save()
+
+        return Response(status=status.HTTP_200_OK)
