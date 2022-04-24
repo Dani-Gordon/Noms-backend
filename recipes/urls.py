@@ -7,5 +7,6 @@ urlpatterns = [
     path('recipes/detail/<int:pk>/', DetailView.as_view()),
     path('recipes/<int:pk>/like/', LikeView.as_view()),
     path('recipes/liked/', LikedListView.as_view()),
+    path('recipes/<int:pk>/removeLike/', RemoveLikeView.as_view(),)
 ]
     

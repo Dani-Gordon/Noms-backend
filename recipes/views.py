@@ -48,3 +48,15 @@ class LikedListView(APIView):
         recipes = request.user.favorites  #get all the liked recipes for user
         serializer = RecipeSerializer(recipes, many=True)
         return Response(serializer.data) #send JSON to the user
+
+
+class RemoveLikeView(APIView):
+
+    permission_classes = (IsAuthenticated, )
+
+    def put(self, request, pk):
+
+        request.user.favorites.remove(pk)
+        request.user.save()
+
+        return Response(status=status.HTTP_200_OK)
