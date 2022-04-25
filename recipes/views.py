@@ -16,8 +16,18 @@ class ListView(APIView):
 class CreateView(APIView):
     def post(self, request):
         serializer = RecipeSerializer(data=request.data)
+
         if serializer.is_valid():
             serializer.save()
+            
+            # loop through ingredients 
+            for ingredientId in request.data["ingredients"]:
+                recipeIngredient = RecipeIngredient()
+                recipeId = serializer.data["id"]
+                recipeIngredient.recipe = Recipe.objects.get(pk=recipeId)
+                recipeIngredient.ingredient = Ingredient.objects.get(pk=ingredientId)
+                recipeIngredient.save()
+
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
