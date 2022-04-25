@@ -60,3 +60,10 @@ class RemoveLikeView(APIView):
         request.user.save()
 
         return Response(status=status.HTTP_200_OK)
+
+
+class IngredientView(APIView):
+    def get(self, request):
+        recipes = Ingredient.objects.all()  #get all the ingredients
+        serializer = IngredientSerializer(recipes, many=True)
+        return Response(serializer.data) #send JSON to the user
