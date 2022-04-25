@@ -13,7 +13,7 @@ class Recipe(models.Model):
     prep = models.IntegerField(null=True)
     total = models.IntegerField(null=True)
     ingredients = models.ManyToManyField(Ingredient, through='RecipeIngredient')
-    directions = models.TextField(max_length=1000, null=True)
+    directions = models.TextField(max_length=3000, null=True)
     image = models.CharField(max_length=400, blank=True, null=True)
 
     def __str__(self):
