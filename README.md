@@ -30,9 +30,11 @@ View of Noms as a non-registered user. Features include the ability to Register,
 > <img width="1000" alt="Screen Shot 2022-05-20 at 23 59 03" src="https://user-images.githubusercontent.com/99892502/169638050-1af83758-dea4-4e56-8070-8f71d128e6f2.png">
 
 
-View of Noms as a registered, logged in user. Features include the ability to view the Recipe Book, Like a recipe and save it in your Noms Book, view your Noms Book (favorites page), as well as Add your own recipe and Sign Out:
+As a registered & logged in user of Noms, accessible features include the ability to view the Recipe Book, like/unlike a recipe and save it to or remove it from your Noms Box, view your Noms Box (favorites page), as well as Add your own recipe and Sign Out:
 > <img width="359" alt="Screen Shot 2022-05-20 at 23 54 25" src="https://user-images.githubusercontent.com/99892502/169637907-565553b2-2831-43fa-aed2-b2bf1acb3855.png"> <img width="1391" alt="Screen Shot 2022-05-20 at 23 18 19" src="https://user-images.githubusercontent.com/99892502/169637797-7af81562-b3fb-4a19-bf84-68dc2bcbad5e.png">
 > <img width="1000" alt="Screen Shot 2022-05-20 at 23 18 51" src="https://user-images.githubusercontent.com/99892502/169637799-ed9fe800-fd56-44e2-a44d-8e83d5c9ef46.png"><img width="1000" alt="Screen Shot 2022-05-20 at 23 19 19" src="https://user-images.githubusercontent.com/99892502/169637801-97d82631-e8f5-41f0-af97-8aaad346dbde.png">
+
+
 
 
 
