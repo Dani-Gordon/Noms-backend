@@ -15,10 +15,10 @@ Feel free to register and then use your own login credentials, or try a demo usi
 View of Noms as a non-registered user. Features include the ability to Register, Login and view the Recipe Book: 
 > <img width="1000" alt="Screen Shot 2022-05-20 at 18 10 54" src="https://user-images.githubusercontent.com/99892502/169626395-a84abd70-0c2f-4486-afd3-6a488b6a0300.png">
 
-> <img width="500" alt="Screen Shot 2022-05-20 at 18 12 27" src="https://user-images.githubusercontent.com/99892502/169637657-b14554cc-0511-40c4-981c-0c05cc9c67fc.png">  <img width="500" alt="Screen Shot 2022-05-20 at 18 12 55" src="https://user-images.githubusercontent.com/99892502/169637662-aeb6472b-ac23-4628-a361-6638a1217c90.png">
+> <img width="475" alt="Screen Shot 2022-05-20 at 18 12 27" src="https://user-images.githubusercontent.com/99892502/169637657-b14554cc-0511-40c4-981c-0c05cc9c67fc.png">  <img width="475" alt="Screen Shot 2022-05-20 at 18 12 55" src="https://user-images.githubusercontent.com/99892502/169637662-aeb6472b-ac23-4628-a361-6638a1217c90.png">
 
 
-> <img width="1334" alt="Screen Shot 2022-05-20 at 23 59 03" src="https://user-images.githubusercontent.com/99892502/169638050-1af83758-dea4-4e56-8070-8f71d128e6f2.png">
+> <img width="1000" alt="Screen Shot 2022-05-20 at 23 59 03" src="https://user-images.githubusercontent.com/99892502/169638050-1af83758-dea4-4e56-8070-8f71d128e6f2.png">
 
 
 View of Noms as a registered, logged in user. Features include the ability to view the Recipe Book, Like a recipe and save it in your Noms Book, view your Noms Book (favorites page), as well as Add your own recipe and Sign Out:
