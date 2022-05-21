@@ -11,6 +11,15 @@ Feel free to register and then use your own login credentials, or try a demo usi
 - Email: user10@user.com
 - Password: Password!1
 
+## Goals and Timeframe: 
+- Build a full-stack application using a Python Django API (using Django REST Framework to serve your data from a Postgres database). Consume your API with a separate front-end built with React. Have multiple relationships and CRUD functionality for a few models. Implement thoughtful user stories/wireframes to develop your MVP and stretch goals. Have an entity relationship diagram showing proposed database schema. Have a visually impressive design. Follow suggestions to be deployed online so it's publicly accessible.
+- 13 days 
+
+## Technologies Used:
+React (JavaScript) | Sass | CSS | Bulma | Python | Django | PostgreSQL | Heroku | Netlify
+
+# Site Overview
+***
 
 View of Noms as a non-registered user. Features include the ability to Register, Login and view the Recipe Book: 
 > <img width="1000" alt="Screen Shot 2022-05-20 at 18 10 54" src="https://user-images.githubusercontent.com/99892502/169626395-a84abd70-0c2f-4486-afd3-6a488b6a0300.png">
