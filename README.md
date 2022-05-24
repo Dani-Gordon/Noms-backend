@@ -12,8 +12,8 @@ Feel free to register and then use your own login credentials, or try a demo usi
 - Password: Password!1
 
 ## Goals and Timeframe: 
-- Build a full-stack application using a Python Django API (using Django REST Framework to serve your data from a Postgres database). Consume your API with a separate front-end built with React. Have multiple relationships and CRUD functionality for a few models. Implement thoughtful user stories/wireframes to develop your MVP and stretch goals. Have an entity relationship diagram showing proposed database schema. Have a visually impressive design. Follow suggestions to be deployed online so it's publicly accessible.
-- 13 days 
+- Build a full-stack application using a Python Django API (using Django REST Framework to serve your data from a Postgres database). Consume your API with a separate front-end built with React. Have multiple relationships and CRUD functionality for a few models. Implement thoughtful user stories/wireframes to develop your MVP and stretch goals. Have an entity relationship diagram showing the proposed database schema. Have a visually impressive design. Follow suggestions to be deployed online so it's publicly accessible.
+- 13 days (solo project)
 
 ## Technologies Used:
 React (JavaScript) | Sass | CSS | Bulma | Python | Django | PostgreSQL | Heroku | Netlify
@@ -58,7 +58,7 @@ First, I created a simple ‘Hello World’ Django application and deployed it t
 
 ***Models, Views, Serializers & Urls***
 
-I created a separate Django app for Recipes, wrote a basic Recipe serializer, a simple Recipe model (pictured below is the basic model plus what was added later - the inital model only had a name), a ListView with a GET request for all recipes and added the url path. I then created an app for jwt_auth and wrote the models, views and urls. I tested each route as I went using Django’s built-in admin site and Postman. In addition, I utilized TablePlus to test my connection and see tables/relationships within my PostgreSQL database.    
+I created a separate Django app for Recipes, wrote a basic Recipe serializer, a simple Recipe model (pictured below is the basic model plus what was added later - the initial model only had a name), a ListView with a GET request for all recipes and added the url path. I then created an app for jwt_auth and wrote the models, views and urls. I tested each route as I went using Django’s built-in admin site and Postman. In addition, I utilized TablePlus to test my connection and see tables/relationships within my PostgreSQL database.    
 
 - Recipe Serializer 
   - I wrote the serializers, updating and/or adding more as needed             
@@ -101,13 +101,13 @@ I worked on the frontend and backend simultaneously when I first got the fronten
 
 ## Logged in vs Logged Out
 
-The NavBar indicates whether someone is logged in or out based on the options available. If signed in, there is a Sign Out link available. Once signed out, the users authentication token is removed and the user is taken back to the home page. 
+The NavBar indicates whether someone is logged in or out based on the options available. If signed in, there is a Sign Out link available. Once signed out, the user's authentication token is removed and the user is taken back to the home page. 
 
 ![Screen Shot 2022-05-21 at 22 21 09](https://user-images.githubusercontent.com/99892502/169678624-3f9f187e-53ac-4e88-9a0a-1d1ff8aecb88.png)
 
 ## Create Your own Recipe
 
-The form for adding your own recipe includes a section with checkboxes to add ingredients to your recipe. It does not currenlty include the ability to add your own or add the quantity of the ingredient, but this is on the list for future functionality! The ingredients currently listed on the form were input manually on the backend in the database, as they are ingredients included in the recipes available to view in the recipe book. Pulling the ingredients from the database was challenging as the ingredient itself was nested quite deep within the object. Below are snippets of code showing the checkboxes on the form as well as the functions for selecting ingredients. 
+The form for adding your own recipe includes a section with checkboxes to add ingredients to your recipe. It does not currently include the ability to add your own or add the quantity of the ingredient, but this is on the list for future functionality! The ingredients currently listed on the form were input manually on the backend in the database, as they are ingredients included in the recipes available to view in the recipe book. Pulling the ingredients from the database was challenging as the ingredient itself was nested quite deep within the object. Below are snippets of code showing the checkboxes on the form as well as the functions for selecting ingredients. 
 
 <img width="400" alt="CreateOwnRecipe" src="https://user-images.githubusercontent.com/99892502/169678920-6c1ff651-4a2f-4a0e-9b7b-ca3ac2469ee1.png">
 <img width="400" alt="Checkboxes" src="https://user-images.githubusercontent.com/99892502/169678804-98e7cdcc-4d43-45d0-bcd1-5dcd276bd42f.png">
